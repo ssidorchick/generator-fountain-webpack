@@ -13,14 +13,6 @@ function merge(args) {
   return result;
 }
 
-const conf = {
-  module: {
-    loaders: [
-      {test: lit`/\\.json$/`, loaders: ['json-loader']}
-    ]
-  }
-};
-
 test('conf dev with react/css/babel', t => {
   const options = {
     test: false,
@@ -29,7 +21,7 @@ test('conf dev with react/css/babel', t => {
     css: 'css',
     js: 'babel'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -85,7 +77,7 @@ test('conf dev with react/scss/babel', t => {
     css: 'scss',
     js: 'babel'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -141,7 +133,7 @@ test('conf dev with react/less/babel', t => {
     css: 'less',
     js: 'babel'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -197,7 +189,7 @@ test('conf test with react/css/typescript', t => {
     css: 'css',
     js: 'typescript'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -251,7 +243,7 @@ test('conf with angular1/scss/js', t => {
     css: 'scss',
     js: 'js'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -317,7 +309,7 @@ test('conf with angular1/scss/js', t => {
     css: 'scss',
     js: 'js'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -383,7 +375,7 @@ test('conf with angular1/styl/typescript', t => {
     css: 'styl',
     js: 'typescript'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -459,7 +451,7 @@ test('conf with angular2/less/typescript', t => {
     css: 'less',
     js: 'typescript'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -544,7 +536,7 @@ test('conf with angular2/less/typescript/todoMVC', t => {
     js: 'typescript',
     sample: 'todoMVC'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -628,7 +620,7 @@ test('conf with react/css/babel', t => {
     css: 'css',
     js: 'babel'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -668,7 +660,7 @@ test('conf with angular2/css/babel', t => {
     css: 'css',
     js: 'babel'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     plugins: [
       lit`new webpack.ContextReplacementPlugin(
       /angular(\\\\|\\/)core(\\\\|\\/)(esm(\\\\|\\/)src|src)(\\\\|\\/)linker/,
@@ -712,7 +704,7 @@ test('conf with angular2/css/js', t => {
     css: 'css',
     js: 'js'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -781,7 +773,7 @@ test('conf with react/css/typescript', t => {
     css: 'css',
     js: 'typescript'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {
@@ -848,7 +840,7 @@ test('conf with vue/css/babel', t => {
     css: 'css',
     js: 'babel'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     plugins: [
       lit`new webpack.LoaderOptionsPlugin({
       options: {},
@@ -889,7 +881,7 @@ test('conf with react/css/typescript/todoMVC', t => {
     js: 'typescript',
     sample: 'todoMVC'
   };
-  const expected = merge([{}, conf, {
+  const expected = merge([{}, {
     module: {
       loaders: [
         {

@@ -9,9 +9,7 @@ module.exports = function webpackConf(options) {
   };
   const conf = {
     module: {
-      loaders: [
-        {test: lit`/\\.json$/`, loaders: ['json-loader']}
-      ]
+      loaders: []
     }
   };
 
